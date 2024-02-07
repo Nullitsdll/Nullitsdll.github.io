@@ -197,6 +197,9 @@ section:not(:hover) {
     #youtube:hover{
         transform: scale(1.2) translate(-15px, -15px);
     }
+        #particles-js {
+        display: none; /* Ocultar las partículas en dispositivos móviles */
+    }
 
 
 }
