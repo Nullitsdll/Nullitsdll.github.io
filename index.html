@@ -3,63 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página - Sobre Mí</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Comfortaa:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-ezrDfACeZcLKLlM2K5zApHOESO3P5Ff8+aF5KewaNA4Jp2ZKDBz3RTo0mg9LIj7f" crossorigin="anonymous">
-    <meta name="viewport" content="width=1200">
+    <title>Video con sonido</title>
 </head>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black; /* Establece el fondo en negro */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Hace que el contenido ocupe toda la altura de la ventana del navegador */
+        }
+
+        video {
+            max-width: 40%; /* Ajusta el tamaño máximo del video al ancho de la ventana */
+            height: auto; /* Permite que el video mantenga su proporción de aspecto */
+        }
+    </style>
 <body>
-
-    <div id="particles-js"></div>
-
-    <section id="about">
-        <div class="profile-image-container">
-            <img src="OIP.jfif" alt="Tu Foto">
-        </div>
-        <h1>About Me</h1>
-        <p>I am a Digital Forensics Student, Programming Student, and Multilingual Student. I am passionate about learning and exploring new technologies.</p>
-        <p>I believe in continuous improvement and strive to expand my knowledge in diverse fields.</p>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <div class="social-icons">
-            <a id="discordLink" class="social-icon custom-tooltip" title="nullx64" onclick="copyToClipboard()">
-                <img id="discord" src="Discord.png" alt="Discord Icon">
-            </a>
-            <a href="https://youtube.com/@Nullitsdll" class="social-icon">
-                <img id="youtube" src="Youtube.png" alt="Youtube Icon">
-            </a>
-            <a href="https://github.com/Nullitsdll" class="social-icon">
-                <img id="github" src="Github.png" alt="Github Icon">
-            </a>
-        </div>
-    </section>
-    
-    <section id="Skills">
-        <h2>My Skills</h2>
-        <div>
-            <p id="Senior">Senior
-                <br>  <img id="css" src="css-3.png">
-                <br>  <img id="html" src="html.png">
-                <br>  <img id="git" src="git.png">
-            </p>
-            <p id="Mid">Mid
-                <br>  <img id="py" src="python.png">
-                <br>  <img id="c" src="c-sharp.png">
-                <br>  <img id="js" src="js.png">
-            </p>  
-            <p id="Junior">Junior
-                <br>   <img id="sql" src="database.png">
-            </p>
-        </div>
-    </section>
-
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
-    <script src="script.js"></script>
+    <video width="640" height="360" controls autoplay loop playsinline>
+        <source src="My_video.mp4" type="video/mp4">
+        <source src="tu_video.ogg" type="video/ogg">
+        Tu navegador no admite el elemento de vídeo.
+    </video>
 </body>
 </html>
