@@ -1,0 +1,264 @@
+body {
+    background-color: #1b1b1b; /* Color gris suave */
+    color: #7CFC00; /* Cambiar el color del texto para mejor contraste */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+h1 {
+    color: #7CFC00;
+    font-size: 2.5em;
+    text-shadow: 0 0 10px #7CFC00;
+}
+
+.intro, .message {
+    font-size: 1.2em;
+    text-align: center;
+    max-width: 600px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+button {
+    background-color: #1e3b1e;
+    color: #ccffcc;
+    border: 1px solid #7CFC00;
+    padding: 14px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #2f4f2f;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.message {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #141414;
+    border: 1px solid #4CAF50;
+    border-radius: 6px;
+    display: none;
+    line-height: 1.6;
+}
+
+#startScreen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: radial-gradient(circle, rgb(32, 32, 32) 0%, rgb(0, 0, 0) 70%); /* Degradado */
+    position: relative; /* Para que las partículas se muestren detrás */
+}
+
+#mainContent {
+    display: none;
+}
+
+.container {
+    padding: 10px;
+}
+
+button {
+    width: 100%;
+    max-width: 300px; /* Limitar el ancho máximo del botón */
+}
+
+.intro, .message {
+    font-size: 1em; /* Ajustar el tamaño de fuente en móviles */
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em; /* Ajustar tamaño de encabezado en móviles */
+    }
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Asegurarse de que esté detrás de otros elementos */
+}
+
+a {
+    text-decoration: none; /* Eliminar subrayado */
+}
+
+a button {
+    background-color: #1e3b1e; /* Color de fondo del botón */
+    color: #ccffcc; /* Color del texto del botón */
+    border: 1px solid #7CFC00; /* Borde del botón */
+    padding: 14px 24px; /* Espaciado del botón */
+    font-size: 16px; /* Tamaño de fuente del botón */
+    cursor: pointer; /* Cambiar cursor al pasar sobre el botón */
+    border-radius: 8px; /* Bordes redondeados del botón */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones */
+}
+
+a button:hover {
+    background-color: #2f4f2f; /* Color de fondo al pasar el mouse */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra al pasar el mouse */
+}
+
+a button:active {
+    transform: scale(0.95); /* Efecto de escalado al hacer clic */
+    background-color: #4CAF50; /* Cambiar color al presionar */
+}
+body {
+    background-color: #1b1b1b; /* Color gris suave */
+    color: #7CFC00; /* Cambiar el color del texto para mejor contraste */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+h1 {
+    color: #7CFC00;
+    font-size: 2.5em;
+    text-shadow: 0 0 10px #7CFC00;
+}
+
+.intro, .message {
+    font-size: 1.2em;
+    text-align: center;
+    max-width: 600px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+button {
+    background-color: #1e3b1e;
+    color: #ccffcc;
+    border: 1px solid #7CFC00;
+    padding: 14px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #2f4f2f;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.message {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #141414;
+    border: 1px solid #4CAF50;
+    border-radius: 6px;
+    display: none;
+    line-height: 1.6;
+}
+
+#startScreen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: radial-gradient(circle, rgb(32, 32, 32) 0%, rgb(0, 0, 0) 70%); /* Degradado */
+    position: relative; /* Para que las partículas se muestren detrás */
+}
+
+#mainContent {
+    display: none;
+}
+
+.container {
+    padding: 10px;
+}
+
+button {
+    width: 100%;
+    max-width: 300px; /* Limitar el ancho máximo del botón */
+}
+
+.intro, .message {
+    font-size: 1em; /* Ajustar el tamaño de fuente en móviles */
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em; /* Ajustar tamaño de encabezado en móviles */
+    }
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Asegurarse de que esté detrás de otros elementos */
+}
+
+a {
+    text-decoration: none; /* Eliminar subrayado */
+}
+
+a button {
+    background-color: #1e3b1e; /* Color de fondo del botón */
+    color: #ccffcc; /* Color del texto del botón */
+    border: 1px solid #7CFC00; /* Borde del botón */
+    padding: 14px 24px; /* Espaciado del botón */
+    font-size: 16px; /* Tamaño de fuente del botón */
+    cursor: pointer; /* Cambiar cursor al pasar sobre el botón */
+    border-radius: 8px; /* Bordes redondeados del botón */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones */
+}
+
+a button:hover {
+    background-color: #2f4f2f; /* Color de fondo al pasar el mouse */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra al pasar el mouse */
+}
+
+a button:active {
+    transform: scale(0.95); /* Efecto de escalado al hacer clic */
+    background-color: #4CAF50; /* Cambiar color al presionar */
+}

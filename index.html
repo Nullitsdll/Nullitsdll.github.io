@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Frasco de los Días Rotos</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <style>
+        body {
+            background: radial-gradient(circle, rgb(32, 32, 32) 0%, rgb(0, 0, 0) 70%);
+            color: #7CFC00;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        #startScreen {
+            position: relative; /* Para que las partículas se muestren detrás */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: radial-gradient(circle, rgb(32, 32, 32) 0%, rgb(0, 0, 0) 70%); /* Degradado */
+        }
+
+        button {
+            background-color: #141414;
+            color: #7CFC00;
+            border: 1px solid #7CFC00;
+            padding: 14px 24px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #141414;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        button:active {
+            transform: scale(0.95);
+            background-color: #131313;
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div id="startScreen">
+        <h1>¿Estás lista, Ame?</h1>
+        <p class="intro">Esto no es solo una página. Es una mano extendida. Un susurro para cuando todo duele.</p>
+        <button onclick="start()">Abrir el frasco</button>
+    </div>
+
+    <div id="mainContent" class="container">
+        <h1>El Frasco de los Días Rotos</h1>
+        <p class="intro">Elegí una frase según cómo te sientas hoy. Estás viva. Y eso ya es un acto de coraje.</p>
+        <div class="button-container">
+            <button onclick="showMessage(0)">Si hoy te sentís sola</button>
+            <button onclick="showMessage(1)">Si pensás que no valés nada</button>
+            <button onclick="showMessage(2)">Si estás por rendirte otra vez</button>
+            <button onclick="showMessage(4)">Si sentís que sos una carga</button>
+            <button onclick="showMessage(5)">Si lo extrañas</button>
+            <button onclick="showMessage(6)">Si te cuestionas el porque no se pudo</button>
+           
+        </div>
+        <div class="message" id="messageBox"></div>
+    </div>
+
+    <script>
+        const messages = [
+            "Ame, sé que a veces te sientes sola, como si nadie te entendiera. Pero recuerda, incluso en el silencio, hay alguien que cree en ti. Yo estoy aquí.",
+            "Cuando mires al espejo y sientas que no vales nada, recuerda que ese reflejo no conoce tu verdadero valor. Eres más fuerte de lo que piensas, Ame.",
+            "Si sientes que no vale la pena seguir, lee esto de nuevo. Hay personas que se quedan por ti, y yo soy una de ellas. El mundo necesita tu luz, Ame.",
+            "Es normal sentirse enojada a veces, Ame. El enojo es solo la piel de la tristeza. No es debilidad, es una señal de que estás viva y sintiendo.",
+            "Ame, no eres una carga. Eres una historia hermosa que aún se está escribiendo. El mundo necesita más personas como tú, así que quédate aquí."
+        ];
+
+        function start() {
+            document.getElementById("startScreen").style.display = "none";
+            document.getElementById("mainContent").style.display = "flex";
+        }
+
+        function showMessage(index) {
+        const links = [
+            "https://wa.me/5493562449379",       // soledad
+            "https://open.spotify.com/intl-es/track/1Pc05LYLZ53LYg3QPs6RJY?si=5c1cb61050244279",                                // no valés nada
+            "https://telegra.ph/Hola-05-31-14",                                  // rendirte
+            "https://open.spotify.com/playlist/5aUy2a6L7oUdyT8Ru5allK",                    // sos una carga
+            "https://www.youtube.com/watch?v=yr_4nVjCU5I",
+            "https://youtu.be/qWXNgS-Zxjc?t=1417"
+        ];
+        window.open(links[index], "_blank");
+        }
+
+        // Inicializar partículas
+        document.addEventListener("DOMContentLoaded", function() {
+            particlesJS("particles-js", {
+                particles: {
+                    number: {
+                        value: 100,
+                        density: {
+                            enable: true,
+                            value_area: 800
+                        }
+                    },
+                    color: {
+                        value: "#7CFC00"
+                    },
+                    shape: {
+                        type: "circle", // Cambiar a círculos difuminados
+                        stroke: {
+                            width: 0,
+                            color: "#000000"
+                        },
+                        polygon: {
+                            nb_sides: 5
+                        },
+                        image: {
+                            src: "img/github.svg",
+                            width: 100,
+                            height: 100
+                        }
+                    },
+                    opacity: {
+                        value: 0.5, // Disminuir opacidad para un efecto difuminado
+                        random: false,
+                        anim: {
+                            enable: false,
+                            speed: 1,
+                            opacity_min: 0.1,
+                            sync: false
+                        }
+                    },
+                    size: {
+                        value: 5, // Aumentar tamaño para un efecto más visible
+                        random: true,
+                        anim: {
+                            enable: false,
+                            speed: 40,
+                            size_min: 0.1,
+                            sync: false
+                        }
+                    },
+                    line_linked: {
+                        enable: false
+                    },
+                    move: {
+                        enable: true,
+                        speed: 1,
+                        direction: "none",
+                        random: false,
+                        straight: false,
+                        out_mode: "out",
+                        bounce: false,
+                        attract: {
+                            enable: false,
+                            rotateX: 600,
+                            rotateY: 1200
+                        }
+                    }
+                },
+                interactivity: {
+                    detect_on: "canvas",
+                    events: {
+                        onhover: {
+                            enable: true,
+                            mode: "repulse"
+                        },
+                        onclick: {
+                            enable: true,
+                            mode: "push"
+                        },
+                        resize: true
+                    },
+                    modes: {
+                        grab: {
+                            distance: 400,
+                            line_linked: {
+                                opacity: 1
+                            }
+                        },
+                        bubble: {
+                            distance: 400,
+                            size: 40,
+                            duration: 2,
+                            opacity: 8,
+                            speed: 3
+                        },
+                        repulse: {
+                            distance: 200,
+                            duration: 0.4
+                        },
+                        push: {
+                            particles_nb: 4
+                        },
+                        remove: {
+                            particles_nb: 2
+                        }
+                    }
+                },
+                retina_detect: true
+            });
+        });
+    </script>
+</body>
+</html>
